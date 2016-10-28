@@ -19,11 +19,7 @@ public class HelloServiceImp implements HelloService {
 
 	@RequestMapping(value = "/user/", method = RequestMethod.GET)
 	public ResponseEntity<List<Person>> listAllPerson() {
-		/*
-		 * List<User> users = userService.findAllUsers(); if (users.isEmpty()) {
-		 * return new ResponseEntity<List<User>>(HttpStatus.NO_CONTENT);// You
-		 * // many // decide // to // return // HttpStatus.NOT_FOUND }
-		 */
+
 		return null;
 	}
 
