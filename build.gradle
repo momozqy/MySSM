@@ -1,0 +1,33 @@
+apply plugin: 'java'
+apply plugin: 'eclipse'
+
+repositories {
+    mavenCentral()
+}
+dependencies {
+//structs library
+   compile  'org.apache.commons:commons-lang3:3.0'
+   compile  'log4j:log4j:1.2.16'
+   compile  'org.apache.struts:struts2-core:2.5.2'
+   compile  'org.apache.struts:struts2-spring-plugin:2.5.2'
+   compile  'org.apache.struts:struts2-json-plugin:2.5.2'
+//spring library
+   compile group:'org.springframework',name:'spring-core',version:'4.3.2.RELEASE'
+   compile group:'org.springframework',name:'spring-web',version:'4.3.2.RELEASE'
+   compile group:'org.springframework',name:'spring-orm',version:'4.3.2.RELEASE'
+   compile group:'org.springframework',name:'spring-aop',version:'4.3.2.RELEASE'
+   compile group:'org.springframework',name:'spring-webmvc',version:'4.3.2.RELEASE'
+   compile group:'org.springframework',name:'spring-aspects',version:'4.3.2.RELEASE'
+   compile group:'org.springframework',name:'spring-jdbc',version:'4.3.2.RELEASE'
+  // compile group:'org.springframework.ws',name:'spring-ws-core',version:'2.3.0.RELEASE'
+   
+//mybatis library
+   compile 'org.mybatis:mybatis:3.4.1'
+   compile 'org.mybatis:mybatis-spring:1.3.0'
+   compile 'org.apache.commons:commons-dbcp2:2.1.1'
+   compile 'org.apache.commons:commons-pool2:2.4.2'
+   compile 'org.slf4j:slf4j-api:1.7.13'
+//mysql connection
+   compile 'mysql:mysql-connector-java:5.1.39'
+   compile 'org.lazyluke:log4jdbc-remix:0.2.7'
+}
