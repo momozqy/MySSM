@@ -3,13 +3,33 @@
     xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
 	xmlns:beans="http://www.springframework.org/schema/beans"
 	xmlns:context="http://www.springframework.org/schema/context"
-	xmlns:webmvc="http://www.springframework.org/schema/webmvc"
+	xmlns:mvc="http://www.springframework.org/schema/mvc"
 	xsi:schemaLocation="
 	http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans-4.3.xsd
-	http://www.springframework.org/schema/webmvc http://www.springframework.org/schema/webmvc/spring-webmvc-4.3.xsd
+	http://www.springframework.org/schema/mvc http://www.springframework.org/schema/mvc/spring-mvc-4.3.xsd
 	http://www.springframework.org/schema/context http://www.springframework.org/schema/context/spring-context-4.3.xsd
 	">
 	<context:property-placeholder location="classpath:/jdbc.properties"/>
+	<mvc:annotation-driven content-negotiation-manager="contentManager"/>  
+    <bean id="contentManager"  
+                class="org.springframework.web.accept.ContentNegotiationManagerFactoryBean">  
+       <property name="favorPathExtension" value="true"/>  
+       <property name="ignoreAcceptHeader" value="true" />  
+       <property name="defaultContentType" value="text/html" />  
+       <property name="useJaf" value="false"/>  
+       <property name="mediaTypes">  
+           <map>  
+               <entry key="json" value="application/json" />  
+               <entry key="html" value="text/html" />  
+               <entry key="xml" value="application/xml" />  
+           </map>  
+       </property>  
+    </bean>
+    <bean id="jspViewResolver"  
+        class="org.springframework.web.servlet.view.InternalResourceViewResolver">  
+        <property name="prefix" value="/WEB-INF/jsp/" />  
+        <property name="suffix" value=".jsp" />  
+    </bean>   
 	<bean id="dataSource" class="org.apache.commons.dbcp2.BasicDataSource" destroy-method="close">
 		<property name="driverClassName" value="${jdbc.driverClassName}"/>
 		<property name="url" value="${jdbc.url}"/>
@@ -19,6 +39,8 @@
         <property name="minIdle" value="1"/><!-- 最小等待连接中的数量,设 0 为没有限制  -->  
         <property name="maxTotal" value="25" /><!-- 连接池的最大数据库连接数。设为0表示无限制。 -->  
 	</bean>
+	<bean class="org.springframework.beans.factory.annotation.     
+        AutowiredAnnotationBeanPostProcessor"/> 
 	<!-- 配置mybatis的bean -->
 	<bean id="sqlSessionFactory" class="org.mybatis.spring.SqlSessionFactoryBean">
 		<property name="dataSource" ref="dataSource" />
@@ -28,7 +50,7 @@
 		<property name="mapperInterface" value="com.xiaoyu.mapper.PersonMapper" />
 		<property name="sqlSessionFactory" ref="sqlSessionFactory" />
 	</bean>
-	<bean id="helloServiceImp" class="com.xiaoyu.service.imp.helloServiceImp">
+<!-- 	<bean id="helloServiceImp" class="com.xiaoyu.service.imp.helloServiceImp">
 		<property name="personMapper" ref="personMapper" />
-	</bean>
+	</bean> -->
 </beans>
