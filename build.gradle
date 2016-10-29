@@ -30,4 +30,8 @@ dependencies {
 //mysql connection
    compile 'mysql:mysql-connector-java:5.1.39'
    compile 'org.lazyluke:log4jdbc-remix:0.2.7'
+//配置json
+   compile 'com.fasterxml.jackson.core:jackson-core:2.8.4'
+   compile 'com.fasterxml.jackson.core:jackson-databind:2.8.4'
+   compile 'com.fasterxml.jackson.core:jackson-annotations:2.8.4'
 }

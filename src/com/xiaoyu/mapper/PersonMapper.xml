@@ -10,7 +10,7 @@
 	<result column="password" property="password"/>
 </resultMap> -->
 
-<select id="selectUserById" resultType="String">
-		call getUsernameById(#{id})
+<select id="selectUserById" resultType="com.xiaoyu.model.Person">
+		select * from person where id = #{id}
 </select>
 </mapper>
