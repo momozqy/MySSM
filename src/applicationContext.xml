@@ -49,8 +49,11 @@
 		<property name="mapperInterface" value="com.xiaoyu.mapper.PersonMapper" />
 		<property name="sqlSessionFactory" ref="sqlSessionFactory" />
 	</bean>
+	<bean id="userMapper" class="org.mybatis.spring.mapper.MapperFactoryBean">
+		<property name="mapperInterface" value="com.xiaoyu.mapper.UserMapper" />
+		<property name="sqlSessionFactory" ref="sqlSessionFactory" />
+	</bean>
 	<bean id ="helloService" class="com.xiaoyu.service.imp.HelloServiceImp">
-		<property name="personMapper" ref="personMapper" />	
 	</bean>
 <!-- 	<bean id="helloServiceImp" class="com.xiaoyu.service.imp.helloServiceImp">
 		<property name="personMapper" ref="personMapper" />
