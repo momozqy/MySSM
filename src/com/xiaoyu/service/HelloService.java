@@ -4,4 +4,6 @@ import com.xiaoyu.model.Person;
 
 public interface HelloService {
 	abstract public boolean checkUser(Person p);
+
+	public Person getPerson(int id);
 }

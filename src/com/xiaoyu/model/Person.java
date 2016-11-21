@@ -1,32 +1,37 @@
 package com.xiaoyu.model;
 
-public class Person {
-	Integer id;
-	String username;
-	String pwd;
+import java.io.Serializable;
 
-	public Integer getId() {
-		return id;
-	}
+public class Person implements Serializable {
+    private Integer id;
 
-	public void setId(Integer id) {
-		this.id = id;
-	}
+    private String username;
 
-	public String getUsername() {
-		return username;
-	}
+    private String pwd;
 
-	public void setUsername(String username) {
-		this.username = username;
-	}
+    private static final long serialVersionUID = 1L;
 
-	public String getPwd() {
-		return pwd;
-	}
+    public Integer getId() {
+        return id;
+    }
 
-	public void setPwd(String pwd) {
-		this.pwd = pwd;
-	}
+    public void setId(Integer id) {
+        this.id = id;
+    }
 
+    public String getUsername() {
+        return username;
+    }
+
+    public void setUsername(String username) {
+        this.username = username == null ? null : username.trim();
+    }
+
+    public String getPwd() {
+        return pwd;
+    }
+
+    public void setPwd(String pwd) {
+        this.pwd = pwd == null ? null : pwd.trim();
+    }
 }
