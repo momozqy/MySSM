@@ -19,7 +19,7 @@ public class HelloAction {
 
 	@RequestMapping(value = "/hello", produces = "text/plain;charset=UTF-8")
 	public String hello() {
-		return "test";
+		return "user/usermerchantinput";
 	}
 
 	@RequestMapping(value = "/user/{id}", method = RequestMethod.GET, produces = "text/plain;charset=UTF-8")

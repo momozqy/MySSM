@@ -1,0 +1,61 @@
+.body-body{
+    padding-left: 60px;
+    padding-right: 40px;
+    height:750px;
+    overflow:scroll;
+}
+caption{
+    background-color: #e8f6ff;
+    font-size: 23px;
+    line-height: 40px;
+    text-align: center !important;
+    color: black !important;
+    font-weight: bold;
+    padding-top: 8px;
+    padding-bottom: 8px;
+}
+.body-explain{
+    background-color: #f3fbfe;
+}
+.answer{
+    font-size: 7px;
+    cursor: pointer;
+}
+
+.body-img a:hover {
+    cursor: pointer;
+    background-image: url(../images/reporter/repDetial-1.jpg);
+}
+.answer-number{
+    color: #3cb242;
+}
+.end-btn{
+   color: #ffffff;
+    width: 500px;
+    text-align: center;
+    margin-left: 230px;
+    line-height: 55px;
+    box-shadow: 0 0 3px #ccc;
+    margin-bottom: 45px !important;
+}
+.table-bordered {
+    border: 1px solid #ddd;
+}
+table {
+    width: 100%;
+    max-width: 100%;
+    margin-bottom: 20px;
+    background-color: transparent;
+    border-spacing: 0;
+    border-collapse: collapse;
+}
+.table-bordered>tbody>tr>td, .table-bordered>tbody>tr>th, .table-bordered>tfoot>tr>td, .table-bordered>tfoot>tr>th, .table-bordered>thead>tr>td, .table-bordered>thead>tr>th {
+    border: 1px solid #ddd;
+}
+
+.table>tbody>tr>td, .table>tbody>tr>th, .table>tfoot>tr>td, .table>tfoot>tr>th, .table>thead>tr>td, .table>thead>tr>th {
+    padding: 8px;
+    line-height: 1.42857143;
+    vertical-align: top;
+    border-top: 1px solid #ddd;
+}

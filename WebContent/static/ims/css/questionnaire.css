@@ -1,0 +1,92 @@
+.body-body{
+    padding-left: 60px;
+    padding-right: 40px;
+    height:750px;
+    overflow:scroll;
+}
+.containerTwelve .TabbedPanelsContentGroup .TabbedPanelsContent:first-child {
+    padding: 25px 0 0 16px;
+}
+input {
+	border: 1px solid rgb(199, 199, 199);
+    box-shadow: none;
+    height:25px;
+}
+input[type="radio" i] {
+	zoom:1.5;
+	height:10px;
+	-webkit-appearance:radio;
+}
+input[type="checkbox" i] {
+	zoom:1.5;
+	height:10px;
+	-webkit-appearance:radio;
+}
+.qnRow {
+	padding-top:12px;
+	padding-bottom:12px;
+	display:block;
+}
+.shortInput {
+	width:87px;
+}
+.sRadio {
+	width:130px;;
+	display:inline-block;
+	padding-top: 5px;
+	padding-bottom: 5px;
+}
+.sRadio-short {
+	width:70px;;
+	display:inline-block;
+	padding-top: 5px;
+	padding-bottom: 5px;
+}
+.sRadio-middle {
+	width:150px;;
+	display:inline-block;
+	padding-top: 5px;
+	padding-bottom: 5px;
+}
+.sRadio-long {
+	width:170px;;
+	display:inline-block;
+	padding-top: 5px;
+	padding-bottom: 5px;
+}
+.sRadio-long-more {
+	width:200px;;
+	display:inline-block;
+	padding-top: 5px;
+	padding-bottom: 5px;
+}
+.nextpage-btn {
+	border-radius: 3px;
+    background-color: #0288e6;
+    ackground-image: linear-gradient(to top, #0a6695, #3c99e2);
+    color: #fff;
+    font-size: 14px;
+    padding: 11px 0;
+    margin-left: auto;
+    margin-right:auto;
+    width: 116px;
+}
+p {
+	padding-top:5px;
+	padding-bottom:5px;
+}
+.underline {
+	width:80px;
+	border-top-width: 0px;
+    border-right-width: 0px;
+    border-bottom-width: 1px;
+    border-left-width: 0px;
+    /*border-top-style: dashed;
+    border-right-style: dashed;
+    border-bottom-style: dashed;
+    border-left-style: dashed;*/
+    border-top-color: #000000;
+    border-right-color: #000000;
+    border-bottom-color: #000000;
+    border-left-color: #000000;
+}
