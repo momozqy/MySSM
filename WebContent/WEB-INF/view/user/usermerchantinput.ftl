@@ -77,6 +77,7 @@
 	<script>
       $(function() {
     	$("#addType").select2();
+    	$("#addType").on("change",function(e){console.log(e);});
         initdata();
       });
 				</script>
