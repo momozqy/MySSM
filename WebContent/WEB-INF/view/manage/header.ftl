@@ -28,10 +28,11 @@
 	<noscript><link rel="stylesheet" href="css/jquery.fileupload-noscript.css"></noscript>
 	<noscript><link rel="stylesheet" href="css/jquery.fileupload-ui-noscript.css"></noscript>
 
-	<link rel="stylesheet" href="/static/validation/bootstrap.css" />
+	<link rel="stylesheet" href="${rc.contextPath}/static/validation/bootstrap.css" />
+	<link rel="stylesheet" href="${rc.contextPath}/static/manage/css/select2.min.css">
     <!-- jQuery -->
     <script src="${rc.contextPath}/static/manage/bower_components/jquery/jquery.min.js"></script>
-	
+	<script src="${rc.contextPath}/static/manage/js/select2.full.min.js"></script>
     <!-- The HTML5 shim, for IE6-8 support of HTML5 elements -->
 
     <!-- The fav icon -->

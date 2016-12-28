@@ -53,15 +53,13 @@
 									</div>
 									<div class="form-group  col-md-12">
 									</div>
-									<div class="form-group  col-md-6">
-										<label for="marchant">授权企业</label>
-										<select id="marchant" data-placeholder="选择授权的企业" class="chosen-select " multiple tabindex="2">
-												<option value="1">测试</option>
-												<option value="2">测试2</option>
-												<option value="3">测试3</option>
-												<option value="4">测试4</option>
+									<div class="form-group col-md-6">
+								        <label for="addType">功能点分类</label>
+										<select name="type" data-placeholder="选择功能点分类" id="addType"class="form-control" multiple='multiple'>
+								        	<option value='0' >菜单</option>
+								        	<option value='1' >功能点</option>
 										</select>
-									</div>
+	         						</div>
 									<div class="form-group col-md-12">
 										<button type="button" class="btn btn-success"
 											onclick="validatecode();">提 交</button>
@@ -78,42 +76,9 @@
 				</div>
 	<script>
       $(function() {
-       
+    	$("#addType").select2();
         initdata();
       });
-function  initdata(){
-	$.post("${rc.contextPath}/userMerchant/getUserBindmerchantList.do",{"id":${user.id}},function(result){
-		var json =  $.parseJSON(result);
-		if(json.code==0 && json.data.length>0){
-			$(json.data).each(function(index,val){
-				$("#marchant").find("option[value='"+val+"']").attr("selected",true);
-			})
-		}
-		$('.chosen-select').chosen();
-	    $('.chosen-select-deselect').chosen({ allow_single_deselect: true });
-	}) 
-}
-					function validatecode() {
-						var id=$("#id").val();
-						if(id==""){
-							id=0;
-						}
-						 var _value = $("#marchant").val();
-						var json = {
-								"id":id,
-								"merchants":_value
-						}
-						$.post("${rc.contextPath}/userMerchant/userBindMerchant.do",json,function(result){
-							layer.alert('操作成功', function(){
-								goIndex();
-						 	});
-						}) 
-						var $btn = $(this).button('loading')
-					}
-					function goIndex() {
-						window.history.back();
-					}
-					
 				</script>
 
 				<!-- content ends -->

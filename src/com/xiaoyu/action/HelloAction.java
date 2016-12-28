@@ -22,6 +22,16 @@ public class HelloAction {
 		return "user/usermerchantinput";
 	}
 
+	@RequestMapping(value = "/input", produces = "text/plain;charset=UTF-8")
+	public String input() {
+		return "merchant/merchantinput";
+	}
+
+	@RequestMapping(value = "/merchant", produces = "text/plain;charset=UTF-8")
+	public String merchant() {
+		return "merchant/merchantinput";
+	}
+
 	@RequestMapping(value = "/user/{id}", method = RequestMethod.GET, produces = "text/plain;charset=UTF-8")
 	public @ResponseBody Person listAllPerson(@PathVariable("id") int id, ModelMap map) {
 		return hello.getPerson(id);
