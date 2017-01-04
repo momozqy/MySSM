@@ -39,4 +39,7 @@ dependencies {
    compile 'com.fasterxml.jackson.core:jackson-core:2.8.4'
    compile 'com.fasterxml.jackson.core:jackson-databind:2.8.4'
    compile 'com.fasterxml.jackson.core:jackson-annotations:2.8.4'
+//配置生成二维码
+   compile 'com.google.zxing:core:3.3.0'
+   compile 'org.apache.directory.studio:org.apache.commons.codec:1.8'
 }
